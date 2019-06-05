@@ -8,9 +8,38 @@
 
 import SwiftUI
 
-struct ContentView : View {
+struct ParentView: View {
+    @EnvironmentObject var appData: AppData
+    
     var body: some View {
-        Text("Hello World")
+        NavigationView {
+            VStack {
+                Text("\(UUID().uuidString)")
+                Text("Counter: \(appData.counterState.count)")
+                ContentView()
+            }
+        }
+    }
+}
+
+struct ContentView : View {
+    @EnvironmentObject var appData: AppData
+    
+    var body: some View {
+        List {
+            Text("\(UUID().uuidString)")
+            Text("Counter: \(self.appData.counterState.count)")
+            Button(action: {
+                self.appData.dispatch(a: CounterAction.CountUp)
+            }) {
+                Text("Count Up")
+            }
+            Button(action: {
+                self.appData.dispatch(a: CounterAction.CountDown)
+            }) {
+                Text("Count Down")
+            }
+        }
     }
 }
 
