@@ -13,8 +13,8 @@ import Combine
 final class AppData: BindableObject {
     var didChange = PassthroughSubject<AppData, Never>()
     
-    var userState = UserState()
-    var counterState = CounterState()
+    private (set) var userState = UserState()
+    private (set) var counterState = CounterState()
     
     func dispatch(a: Action) {
         debugPrint(a)
