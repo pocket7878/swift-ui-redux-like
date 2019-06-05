@@ -13,7 +13,7 @@ final class AppStateReducer: Reducer {
     
     func reduce(s: AppState, a: Action) -> AppState {
         return AppState(
-            userState: s.userState,
+            userState: UserStateReducer().reduce(s: s.userState, a: a),
             counterState: CounterStateReducer().reduce(s: s.counterState, a: a)
         )
     }
