@@ -9,26 +9,33 @@
 import SwiftUI
 
 struct ParentView: View {
-    @EnvironmentObject var appData: AppData
-    
     var body: some View {
         NavigationView {
             VStack {
-                Text("\(UUID().uuidString)")
-                Text("Counter: \(appData.appState.counterState.count)")
+                Text("Parent: \(UUID().uuidString)")
                 ContentView()
             }
         }
     }
 }
 
-struct ContentView : View {
+struct CounterView: View {
     @EnvironmentObject var appData: AppData
     
     var body: some View {
         List {
-            Text("\(UUID().uuidString)")
+            Text("CounterView: \(UUID().uuidString)")
             Text("Counter: \(self.appData.appState.counterState.count)")
+        }
+    }
+}
+
+struct CounterButton: View {
+    @EnvironmentObject var appData: AppData
+    
+    var body: some View {
+        List {
+            Text("CounterButton: \(UUID().uuidString)")
             Button(action: {
                 self.appData.dispatch(a: CounterAction.CountUp)
             }) {
@@ -39,6 +46,20 @@ struct ContentView : View {
             }) {
                 Text("Count Down")
             }
+        }
+    }
+}
+
+struct ContentView : View {
+    @EnvironmentObject var appData: AppData
+    
+    var body: some View {
+        VStack {
+            Text("ContentView: \(UUID().uuidString)")
+            Text("CounterView ↓")
+            CounterView()
+            Text("CounterButton ↓")
+            CounterButton()
         }
     }
 }
