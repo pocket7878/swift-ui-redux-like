@@ -9,5 +9,5 @@
 import Foundation
 
 struct CounterState: ReduxState {
-    var count: Int = 0
+    let count: Int
 }

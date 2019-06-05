@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6926CC1D22A75B1C00F13978 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6926CC1C22A75B1C00F13978 /* AppState.swift */; };
+		6926CC1F22A75B6C00F13978 /* AppStateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6926CC1E22A75B6C00F13978 /* AppStateReducer.swift */; };
 		699CEE7722A6BA0800EDD799 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699CEE7622A6BA0800EDD799 /* AppDelegate.swift */; };
 		699CEE7922A6BA0800EDD799 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699CEE7822A6BA0800EDD799 /* SceneDelegate.swift */; };
 		699CEE7B22A6BA0800EDD799 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699CEE7A22A6BA0800EDD799 /* ContentView.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6926CC1C22A75B1C00F13978 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		6926CC1E22A75B6C00F13978 /* AppStateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateReducer.swift; sourceTree = "<group>"; };
 		699CEE7322A6BA0800EDD799 /* SwiftUIRedux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIRedux.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		699CEE7622A6BA0800EDD799 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		699CEE7822A6BA0800EDD799 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,10 +103,10 @@
 		699CEE8C22A6BC2B00EDD799 /* State */ = {
 			isa = PBXGroup;
 			children = (
-				699CEE8A22A6BA2D00EDD799 /* AppData.swift */,
 				699CEE8D22A6BC4100EDD799 /* UserState.swift */,
 				699CEE9522A6BCF400EDD799 /* CounterState.swift */,
 				699CEE9C22A6BD6200EDD799 /* State.swift */,
+				6926CC1C22A75B1C00F13978 /* AppState.swift */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -113,6 +117,7 @@
 				699CEE9922A6BD3900EDD799 /* Reducer */,
 				699CEE9022A6BC9000EDD799 /* Action */,
 				699CEE8C22A6BC2B00EDD799 /* State */,
+				699CEE8A22A6BA2D00EDD799 /* AppData.swift */,
 			);
 			path = Redux;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 				699CEE9A22A6BD4B00EDD799 /* Reducer.swift */,
 				699CEE9E22A6BE8F00EDD799 /* UserStateReducer.swift */,
 				699CEEA022A74B9C00EDD799 /* CounterStateReducer.swift */,
+				6926CC1E22A75B6C00F13978 /* AppStateReducer.swift */,
 			);
 			path = Reducer;
 			sourceTree = "<group>";
@@ -211,12 +217,14 @@
 				699CEE7722A6BA0800EDD799 /* AppDelegate.swift in Sources */,
 				699CEE9422A6BCAD00EDD799 /* UserStateAction.swift in Sources */,
 				699CEE9222A6BC9C00EDD799 /* Action.swift in Sources */,
+				6926CC1F22A75B6C00F13978 /* AppStateReducer.swift in Sources */,
 				699CEE9D22A6BD6200EDD799 /* State.swift in Sources */,
 				699CEE9822A6BD1400EDD799 /* CounterAction.swift in Sources */,
 				699CEE8E22A6BC4100EDD799 /* UserState.swift in Sources */,
 				699CEEA122A74B9C00EDD799 /* CounterStateReducer.swift in Sources */,
 				699CEE7922A6BA0800EDD799 /* SceneDelegate.swift in Sources */,
 				699CEE9F22A6BE8F00EDD799 /* UserStateReducer.swift in Sources */,
+				6926CC1D22A75B1C00F13978 /* AppState.swift in Sources */,
 				699CEE7B22A6BA0800EDD799 /* ContentView.swift in Sources */,
 				699CEE9622A6BCF400EDD799 /* CounterState.swift in Sources */,
 				699CEE9B22A6BD4B00EDD799 /* Reducer.swift in Sources */,

@@ -15,7 +15,7 @@ struct ParentView: View {
         NavigationView {
             VStack {
                 Text("\(UUID().uuidString)")
-                Text("Counter: \(appData.counterState.count)")
+                Text("Counter: \(appData.appState.counterState.count)")
                 ContentView()
             }
         }
@@ -28,7 +28,7 @@ struct ContentView : View {
     var body: some View {
         List {
             Text("\(UUID().uuidString)")
-            Text("Counter: \(self.appData.counterState.count)")
+            Text("Counter: \(self.appData.appState.counterState.count)")
             Button(action: {
                 self.appData.dispatch(a: CounterAction.CountUp)
             }) {
